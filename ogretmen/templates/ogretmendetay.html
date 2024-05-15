@@ -1,0 +1,22 @@
+{% extends 'ogretmenana.html' %}
+{% block ogretmendetay %} 
+
+<!-- <div class="offset-md-1"> -->
+<div class="gorunum"> 
+
+<h1>{{ item.AdiSoyadi }}</h1>
+<p>TC : {{ item.TC }} </p>
+<p>Açıklama : {{ item.Aciklama }}</p>
+<p>listeye <a href="/ogretmenliste">dön</a></p>
+  </div>
+
+<style>
+  .gorunum{
+    margin: 20px;
+    border-left-style:solid;
+    border-width:13px;
+    border-color:deeppink;
+    padding-left:10px;
+  }
+</style>
+{% endblock %} 

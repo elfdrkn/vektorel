@@ -1,0 +1,38 @@
+{% extends 'ogrenciana.html'%}
+{% block listekismi %}
+
+
+
+
+    
+
+      {% for x in ogrenciliste %} 
+<div class="card m-5 " style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{x.AdiSoyadi}}</h5>
+    <p class="card-text">{{x.Aciklama}}</p>
+    <p class="card-text">{{x.TC}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="/sil/{{x.id}}" class="btn btn-danger btn-sm">Sil</a>
+    <a href="/ogrenci/duzelt/{{ x.id}}" class="btn btn-outline-info btn-sm">Düzenle</a>
+    <a href="/ogrenciler/detay/{{ x.id }}" class="btn btn-secondary btn-sm">Detay</a>
+    
+  </div>
+</div>
+
+          
+           
+  
+    {% endfor %}
+       
+
+ 
+
+{% endblock %}
+
+{% block ogrencidetay %}
+
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'ogretmenana.html'%}
+{% block listekismi %}
+
+
+
+
+      {% for x in ogretmenliste %} 
+     <div class="card text-center">
+       <div class="card-header">
+         Eğitmenimiz:
+       </div>
+       <div class="card-body card m-5">
+         <h5 class="card-title ">{{x.AdiSoyadi}}</h5>
+         <p class="card-text ">{{x.Aciklama}}</p>
+         <a href="#" class="btn btn-primary">Go somewhere</a>
+       </div>
+       <div class="card-footer text-body-secondary">
+         2 days ago
+         <a href="/ogretmen/sil/{{x.id}}" class="btn btn-danger btn-sm">Sil</a>
+         <a href="/ogretmen/duzelt/{{ x.id}}" class="btn btn-outline-info btn-sm">Düzenle</a>
+         <a href="/ogretmenler/detay/{{ x.id }}" class="btn btn-secondary btn-sm">Detay</a> 
+       </div>
+     </div>
+
+          
+
+    {% endfor %}
+
+
+
+
+{% endblock %}
+
+{% block ogretmendetay %}
+
+
+
+{% endblock %}

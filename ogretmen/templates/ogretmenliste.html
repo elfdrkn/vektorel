@@ -1,0 +1,45 @@
+{% extends 'ogretmenana.html'%}
+{% block listekismi %}
+
+<table class="table table-striped">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">TC</th>
+      <th scope="col">Adı & Soyadı</th>
+      <th scope="col">Açıklama</th>
+      <th scope="col">İşlemler</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+      {% for x in ogretmenliste %} 
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ x.TC }}</td>
+        <td>{{ x.AdiSoyadi }}</td>
+        <td>{{ x.Aciklama }}</td>
+        <td>
+
+          <a href="/ogretmen/sil/{{x.id}}" class="btn btn-danger btn-sm">Sil</a>
+          <a href="/ogretmen/duzelt/{{ x.id}}" class="btn btn-outline-info btn-sm">Düzenle</a>
+          <a href="/ogretmenler/detay/{{ x.id }}" class="btn btn-secondary btn-sm">Detay</a> 
+          </td>
+            </tr>
+          
+
+    {% endfor %}
+
+
+  </tbody> 
+</table>
+
+{% endblock %}
+
+{% block ogretmendetay %}
+
+
+
+{% endblock %}
